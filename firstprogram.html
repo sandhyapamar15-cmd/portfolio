@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandhya | Web Developer Student</title>
+  <style>
+    :root { --bg:#07111f; --card:rgba(255,255,255,0.1); --text:#f5f7ff; --muted:#cbd5e1; --accent:#7c3aed; --accent-2:#06b6d4; --border:rgba(255,255,255,0.15); }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Segoe UI",sans-serif;color:var(--text);background:linear-gradient(135deg,var(--bg),#16253d 55%,#1d3557);line-height:1.6}
+    a{color:inherit;text-decoration:none} .container{width:min(1120px,calc(100% - 2rem));margin:0 auto}
+    .navbar{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+    .brand{font-size:1.2rem;font-weight:700} .nav-links{display:flex;gap:1.1rem;flex-wrap:wrap} .nav-links a{color:var(--muted)} .nav-links a:hover{color:white}
+    .hero{padding:5rem 0 4rem;display:grid;grid-template-columns:1.2fr 0.8fr;gap:2rem;align-items:center}
+    .hero h1{font-size:clamp(2rem,4vw,3.2rem);margin:0 0 .8rem} .role{color:#a5f3fc;text-transform:uppercase;margin-bottom:1rem} .hero p{color:var(--muted)}
+    .hero-actions{display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap} .btn{padding:.85rem 1.2rem;border-radius:999px;font-weight:600;display:inline-block} .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2))} .btn.secondary{border:1px solid var(--border);background:rgba(255,255,255,.06)}
+    .hero-card{background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.06));border:1px solid var(--border);border-radius:24px;padding:1.4rem}
+    section{padding:4rem 0} .section-title{font-size:1.8rem;margin-bottom:1rem} .section-text{color:var(--muted);margin-bottom:1.5rem;max-width:700px}
+    .about-grid,.skills-grid,.cert-grid,.projects-grid{display:grid;gap:1.2rem}
+    .about-grid{grid-template-columns:repeat(2,1fr)} .skills-grid{grid-template-columns:repeat(2,1fr)} .projects-grid{grid-template-columns:repeat(3,1fr)} .cert-grid{grid-template-columns:repeat(4,1fr)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.2rem}
+    .cert-card{padding:0;overflow:hidden;text-align:center}
+    .cert-card img{width:100%;height:190px;object-fit:contain;background:white;border-radius:18px 18px 0 0;padding:4px}
+    .cert-card h3{font-size:0.95rem;margin:0.8rem 0;padding:0 0.5rem 0.8rem}
+    .tech{color:#a5f3fc;font-size:.9rem;margin:.5rem 0} .project-links{display:flex;gap:.7rem;margin-top:1rem;flex-wrap:wrap} .project-links a{padding:.5rem .9rem;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--border);font-size:.9rem} .project-links a:hover{background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+    .bar{height:10px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden} .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+    .skill-top{display:flex;justify-content:space-between;margin-bottom:.35rem;font-weight:600}
+    .contact-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.2rem} .contact-links a{display:block;margin:.7rem 0;color:var(--muted);word-break:break-all} .contact-links a:hover{color:white}
+    input,textarea{width:100%;padding:.85rem .95rem;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.08);color:white}
+    button{border:none;cursor:pointer;padding:.9rem 1rem;border-radius:12px;font-weight:600;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+    footer{border-top:1px solid var(--border);padding:1.25rem 0 2rem;color:var(--muted);text-align:center}
+    .pdf-box{margin-top:1.5rem;padding:1.2rem;background:rgba(255,255,255,0.06);border:1px dashed var(--border);border-radius:12px;text-align:center}
+    @media(max-width:1024px){.cert-grid{grid-template-columns:repeat(2,1fr)}} 
+    @media(max-width:860px){.hero,.about-grid,.skills-grid,.cert-grid,.contact-wrap,.projects-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">Sandhya</a>
+      <div class="nav-links">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+        <a href="#projects">Projects</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero container">
+      <div>
+        <p class="role">Web Developer Student</p>
+        <h1>Hi, I'm Sandhya</h1>
+        <p>I am a passionate web development student who enjoys creating responsive websites and learning new technologies every day.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary">View My Projects</a>
+          <a href="sandhya-resume.txt" download class="btn secondary">📄 Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-card"><h3>Quick Highlights</h3><ul><li>Responsive Web Design</li><li>HTML, CSS, JavaScript Basics</li><li>VS Code and GitHub Workflow</li></ul></div>
+  </header>
+
+  <section id="about"><div class="container"><h2 class="section-title">About Me</h2><div class="about-grid"><div class="card"><p>I am a motivated web development student with a strong interest in building modern, user-friendly websites.</p></div><div class="card"><p>My journey in web development has helped me understand the importance of clean design, responsive layouts, and accessible user experiences.</p></div></div></div></section>
+
+  <section id="skills"><div class="container"><h2 class="section-title">Skills</h2><div class="skills-grid"><div class="card"><div class="skill-top"><span>HTML</span><span>90%</span></div><div class="bar"><span style="width:90%"></span></div><br><div class="skill-top"><span>CSS</span><span>85%</span></div><div class="bar"><span style="width:85%"></span></div></div><div class="card"><div class="skill-top"><span>JavaScript</span><span>75%</span></div><div class="bar"><span style="width:75%"></span></div><br><div class="skill-top"><span>VS Code</span><span>88%</span></div><div class="bar"><span style="width:88%"></span></div><br><div class="skill-top"><span>GitHub</span><span>80%</span></div><div class="bar"><span style="width:80%"></span></div></div></div></div></section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects-grid">
+        <div class="card"><h3>Weather-Sphere App 🌦️</h3><p>Real-time weather app using OpenWeather API.</p><p class="tech">HTML, CSS, JS, API</p><div class="project-links"><a href="https://sandhyapamar15-cmd.github.io/Weather--sphere-app/" target="_blank">Live Demo</a><a href="https://github.com/sandhyapamar15-cmd/Weather--sphere-app" target="_blank">GitHub</a></div></div>
+        <div class="card"><h3>My Spotify Clone 🎧</h3><p>Responsive Spotify UI clone.</p><p class="tech">HTML, CSS, JavaScript</p><div class="project-links"><a href="https://sandhyapamar15-cmd.github.io/my-spotify-clone/" target="_blank">Live Demo</a><a href="https://github.com/sandhyapamar15-cmd/my-spotify-clone" target="_blank">GitHub</a></div></div>
+        <div class="card"><h3>Student Management System 🎓</h3><p>CRUD app with LocalStorage.</p><p class="tech">HTML, CSS, JS, LocalStorage</p><div class="project-links"><a href="https://sandhyapamar15-cmd.github.io/Student---Management---System/" target="_blank">Live Demo</a><a href="https://github.com/sandhyapamar15-cmd/Student---Management---System" target="_blank">GitHub</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <div class="container">
+      <h2 class="section-title">My Certificates</h2>
+      <p class="section-text">All 7 certificates - Photos + Combined PDF from your VS Code.</p>
+      <div class="cert-grid">
+        <div class="card cert-card"><img src="images/automation.jpg.jpeg" alt="Automation"><h3>Free Automation</h3></div>
+        <div class="card cert-card"><img src="images/deloitte.jpg.jpeg" alt="Deloitte"><h3>Deloitte Data Analytics</h3></div>
+        <div class="card cert-card"><img src="images/mygov.jpg.jpeg" alt="MyGov"><h3>MyGov CAPF Quiz 1</h3></div>
+        <div class="card cert-card"><img src="images/mygov2.jpg.jpeg" alt="MyGov2"><h3>MyGov CAPF Quiz 2</h3></div>
+        <div class="card cert-card"><img src="images/mygov3.jpg.jpeg" alt="MyGov3"><h3>MyGov CA Day Quiz</h3></div>
+        <div class="card cert-card"><img src="images/python.jpg.jpeg" alt="Python"><h3>Python - Beginners</h3></div>
+        <div class="card cert-card"><img src="images/python3.jpg.jpeg" alt="Python3"><h3>Python 3.x</h3></div>
+      </div>
+
+      <div class="pdf-box">
+        <h3 style="margin-top:0;">📁 Combined Certificates PDF</h3>
+        <p style="color:var(--muted)">Aapne jo PDF banayi hai `certificates` folder me, uska button:</p>
+        <a href="certificates/certificates%20pdf%20currently.pdf" target="_blank" class="btn primary" style="margin-top:0.5rem;">📄 View All Certificates PDF</a>
+        <a href="certificates/certificates%20pdf%20currently.pdf" download class="btn secondary" style="margin-left:0.5rem;">⬇️ Download PDF</a>
+      </div>
+
+      <div class="pdf-box">
+        <h3 style="margin-top:0;">📄 My Resume</h3>
+        <p style="color:var(--muted)">Aapka resume jo `sandhya-resume.txt` me hai:</p>
+        <a href="sandhya-resume.txt" target="_blank" class="btn primary">View Resume</a>
+        <a href="sandhya-resume.txt" download class="btn secondary" style="margin-left:0.5rem;">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-wrap">
+        <div class="card">
+          <h3>Connect With Me</h3>
+          <div class="contact-links">
+            <a href="mailto:sandhyapamar15@gmail.com">📧 sandhyapamar15@gmail.com</a>
+            <a href="https://github.com/sandhyapamar15-cmd" target="_blank">💻 github.com/sandhyapamar15-cmd</a>
+            <a href="https://www.linkedin.com/in/sandhya-pamar-808698383" target="_blank">🔗 linkedin.com/in/sandhya-pamar-808698383</a>
+          </div>
+        </div>
+        <div class="card">
+          <form><input type="text" placeholder="Your Name" required /><input type="email" placeholder="Your Email" required /><textarea rows="5" placeholder="Your Message" required></textarea><button type="submit">Send Message</button></form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="container"><p>© 2026 Sandhya Pamar. All rights reserved.</p></div></footer>
+</body>
+</html>

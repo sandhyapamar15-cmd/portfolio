@@ -1,0 +1,14 @@
+Sandhya
+Web Developer Student
+Email: sandhya@gmail.com
+
+
+Skills:
+- HTML
+- CSS
+- JavaScript
+- VS Code
+- GitHub
+
+Summary:
+Passionate web development student focused on building responsive websites and learning modern web technologies.
